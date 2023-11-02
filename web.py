@@ -16,6 +16,14 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.models import load_model
 
+import numpy as np
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+
 model = load_model('mcc_latest.h5')
 
 # find the index of the maximum element in an array
@@ -50,16 +58,9 @@ def predict_image_class(model, img, show = True):
     max_ind = find_max(classes[0])
     print(train_ds[max_ind])
 
-import numpy as np
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            </style>
-            """
+
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-# Load the trained model
-model = tf.keras.models.load_model('trial/mcc_latest.h5')
+
 
 # Streamlit page title and description
 st.title("Image Classification App")
