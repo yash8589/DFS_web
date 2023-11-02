@@ -89,7 +89,8 @@ if uploaded_image:
             # # Decode the predictions if your model has categorical labels
             # class_labels = ['brain_glioma', 'brain_menin', 'brain_tumor', 'oral_normal', 'oral_scc']  # Replace with your class labels
             # predicted_class = predict_image_class(model,uploaded_image)
-            img = cv2.resize(uploaded_image,(224,224))
+            img = image.load_img(uploaded_image, target_size=(224, 224))
+            # img = cv2.resize(uploaded_image,(224,224))
             img = np.reshape(img,[1,224,224,3])
             classes = model.predict(img)
             # print(classes)
