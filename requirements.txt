@@ -95,7 +95,7 @@ pyparsing==3.1.1
 PySocks
 python-dateutil
 pytorch-wheel-installer==0.2.1
-pytorch3d @ git+http://github.com/facebookresearch/pytorch3d.git@6f2212da46f3ad1a596b3e1017be2d16eaaf95f9
+pytorch3d
 pytz==2023.3.post1
 PyYAML==6.0.1
 pyzmq
