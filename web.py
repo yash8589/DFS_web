@@ -1,4 +1,3 @@
-
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -24,7 +23,7 @@ hide_streamlit_style = """
             </style>
             """
 
-model = load_model('mcc_latest.h5')
+model = load_model('t3_5_epoch.h5')
 
 # find the index of the maximum element in an array
 def find_max(arr):
@@ -33,10 +32,31 @@ def find_max(arr):
         if arr[i] == maxi:
             return i
         
-train_ds= ['brain_glioma',
+train_ds= ['all_benign',
+            'all_early',
+            'all_pre',
+            'all_pro',
+            'brain_glioma',
             'brain_menin',
-            'brain_tumor', 
-            'oral_normal', 
+            'brain_tumor',
+            'breast_benign',
+            'breast_malignant',
+            'cervix_dyk',
+            'cervix_koc',
+            'cervix_mep',
+            'cervix_pab',
+            'cervix_sfi',
+            'colon_aca',
+            'colon_bnt',
+            'kidney_normal',
+            'kidney_tumor',
+            'lung_aca',
+            'lung_bnt',
+            'lung_scc',
+            'lymph_cll',
+            'lymph_fl',
+            'lymph_mcl',
+            'oral_normal',
             'oral_scc']
 
 # predict the class from an imput image using our trained model
@@ -122,5 +142,3 @@ st.write("For more details about the model and the categories, please visit our 
 # Add a footer with contact information or copyright details
 st.write("Contact us at yash.agarwal@research.iiit.ac.in or syed.i@research.iiit.ac.in")
 st.write("© 2023 Data Foundation system..")
-
-
