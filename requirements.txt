@@ -82,7 +82,6 @@ prompt-toolkit
 protobuf==4.25.0
 psutil
 ptyprocess
-py2.py3-none-any
 pure-eval
 pyarrow==14.0.0
 pyasn1==0.5.0
